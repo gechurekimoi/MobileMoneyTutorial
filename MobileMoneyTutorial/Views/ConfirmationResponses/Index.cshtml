@@ -1,0 +1,107 @@
+﻿@model IEnumerable<MobileMoneyTutorial.Models.ConfirmationResponse>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TransactionType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TransAmount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BusinessShortCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BillRefNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InvoiceNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OrgAccountBalance)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThirdPartyTransID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MSISDN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransactionType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TransAmount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BusinessShortCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BillRefNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InvoiceNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrgAccountBalance)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdPartyTransID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MSISDN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
